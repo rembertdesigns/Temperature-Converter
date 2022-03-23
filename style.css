@@ -116,3 +116,24 @@ input[type="number"]{
 #toggleButton:hover, #submit button:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000;
+  text-align: center;
+}
+.footer p {
+text-decoration: none;
+color: #fff;
+}
+.footer a {
+  text-decoration: none;
+  color: red;
+}
+.footer a:hover {
+  text-decoration: underline;
+  color: gray;
+}
