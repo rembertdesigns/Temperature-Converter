@@ -1,0 +1,118 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color: Linen;
+}
+#wrapper{
+  width: 270px;
+  height: 265px;
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+form{
+  display: grid;
+  grid-template-columns: 140px 70px;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "input unit"
+    "output button";
+  grid-gap: 20px;
+}
+h1{
+  grid-area: title;
+  font-size: 18px;
+  text-align: center;
+}
+#input{
+  grid-area: input;
+  display: flex;
+  border: 3px inset;
+}
+input[type="number"]{
+  width: 67%;
+  height: stretch;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  opacity: 60%;
+}
+::placeholder{
+  font-size: 12px;
+  text-align: center;
+}
+#inputUnit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: Gainsboro;
+  width: 33%;
+  height: stretch;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 60%;
+}
+#toggle{
+  width: 100%;
+  height: 100%;
+}
+#toggleButton{
+  width: 100%;
+  height: 100%;
+}
+#output{
+  grid-area: output;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#result{
+  position: relative;
+  width: 67%;
+  height: stretch;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  right: 7px;
+}
+#resultUnit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#submit{
+  grid-area: button;
+}
+#submit button{
+  width: 100%;
+  height: 70px;
+}
+#toggleButton, #submit button{
+  border: 3px outset;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+#toggleButton:focus, #submit button:focus, input[type="number"]:focus{
+  outline: none;
+}
+#toggleButton:hover, #submit button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
